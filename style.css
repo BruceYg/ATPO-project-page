@@ -72,6 +72,8 @@ sup { position: relative; top: -.05em; margin-left: 2px; font-size: .65em; line-
 }
 
 .authors li { white-space: nowrap; }
+.authors a { color: inherit; text-decoration: none; }
+.authors a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 .authors sup { color: var(--accent); }
 
 .affiliations {
