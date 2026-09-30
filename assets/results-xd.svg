@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="291.6pt" version="1.1" viewBox="0 0 360 291.6" width="360pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="chart-title chart-description">
+ <title id="chart-title">Jaccard results on XD-Violence</title>
+ <desc id="chart-description">Jaccard scores on XD-Violence, from Table 1 of the ATPO paper. Qwen2.5-VL-7B: 76.54; Qwen3-VL-235B-A22B: 82.53; InternVL3.5-38B: 83.38; SafeWatch-8B: 79.84; ATPO-G-7B: 88.17; ATPO-C-7B: 87.60. Higher is better. ATPO entries are trained on this benchmark; the three general-purpose VLMs are evaluated zero-shot.</desc>
+ <metadata>
+  <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.4.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linecap:butt;stroke-linejoin:round;}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 291.6 
+L 360 291.6 
+L 360 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 143.28 242.028 
+L 356.4 242.028 
+L 356.4 10.206 
+L 143.28 10.206 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path clip-path="url(#p9a45c1ae7b)" d="M 143.28 242.028 
+L 143.28 10.206 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.8;"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="fill:#706065;font-family:Arial;font-size:12.5px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 143.28, 257.975266)" x="143.28" y="257.975266">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path clip-path="url(#p9a45c1ae7b)" d="M 240.152727 242.028 
+L 240.152727 10.206 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.8;"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="fill:#706065;font-family:Arial;font-size:12.5px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 240.152727, 257.975266)" x="240.152727" y="257.975266">50</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path clip-path="url(#p9a45c1ae7b)" d="M 337.025455 242.028 
+L 337.025455 10.206 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.8;"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="fill:#706065;font-family:Arial;font-size:12.5px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 337.025455, 257.975266)" x="337.025455" y="257.975266">100</text>
+     </g>
+    </g>
+    <g id="text_4">
+     <text style="fill:#706065;font-family:Arial;font-size:12.7px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 249.84, 278.704844)" x="249.84" y="278.704844">Jaccard score (0–100)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_3">
+    <path clip-path="url(#p9a45c1ae7b)" d="M 143.28 42.14258 
+L 291.572771 42.14258 
+L 291.572771 23.356357 
+L 143.28 23.356357 
+z
+" style="fill:#d5c5c9;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#p9a45c1ae7b)" d="M 143.28 79.715028 
+L 303.178124 79.715028 
+L 303.178124 60.928804 
+L 143.28 60.928804 
+z
+" style="fill:#d5c5c9;"/>
+   </g>
+   <g id="patch_5">
+    <path clip-path="url(#p9a45c1ae7b)" d="M 143.28 117.287475 
+L 304.82496 117.287475 
+L 304.82496 98.501251 
+L 143.28 98.501251 
+z
+" style="fill:#d5c5c9;"/>
+   </g>
+   <g id="patch_6">
+    <path clip-path="url(#p9a45c1ae7b)" d="M 143.28 154.859922 
+L 297.966371 154.859922 
+L 297.966371 136.073699 
+L 143.28 136.073699 
+z
+" style="fill:#a58a92;"/>
+   </g>
+   <g id="patch_7">
+    <path clip-path="url(#p9a45c1ae7b)" d="M 143.28 192.43237 
+L 314.105367 192.43237 
+L 314.105367 173.646146 
+L 143.28 173.646146 
+z
+" style="fill:#a33243;"/>
+   </g>
+   <g id="patch_8">
+    <path clip-path="url(#p9a45c1ae7b)" d="M 143.28 230.004817 
+L 313.001018 230.004817 
+L 313.001018 211.218593 
+L 143.28 211.218593 
+z
+" style="fill:#ca7987;"/>
+   </g>
+   <g id="text_5">
+    <text style="fill:#362d30;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 132.624, 36.161875)" x="132.624" y="36.161875">Qwen2.5-VL-7B</text>
+   </g>
+   <g id="text_6">
+    <g id="patch_9">
+     <path d="M 295.509425 38.917375 
+L 328.8023 38.917375 
+L 328.8023 26.581562 
+L 295.509425 26.581562 
+z
+" style="fill:#ffffff;"/>
+    </g>
+    <text style="fill:#362d30;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 295.641425, 36.161875)" x="295.641425" y="36.161875">76.54</text>
+   </g>
+   <g id="text_7">
+    <text style="fill:#362d30;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(70.26225 66.989792)">Qwen3-VL</text>
+    <text style="fill:#362d30;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(65.112187 80.478852)">235B-A22B</text>
+   </g>
+   <g id="text_8">
+    <g id="patch_10">
+     <path d="M 307.114778 76.489822 
+L 340.407653 76.489822 
+L 340.407653 64.154009 
+L 307.114778 64.154009 
+z
+" style="fill:#ffffff;"/>
+    </g>
+    <text style="fill:#362d30;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 307.246778, 73.734322)" x="307.246778" y="73.734322">82.53</text>
+   </g>
+   <g id="text_9">
+    <text style="fill:#362d30;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 132.624, 111.306769)" x="132.624" y="111.306769">InternVL3.5-38B</text>
+   </g>
+   <g id="text_10">
+    <g id="patch_11">
+     <path d="M 308.761615 114.062269 
+L 342.05449 114.062269 
+L 342.05449 101.726457 
+L 308.761615 101.726457 
+z
+" style="fill:#ffffff;"/>
+    </g>
+    <text style="fill:#362d30;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 308.893615, 111.306769)" x="308.893615" y="111.306769">83.38</text>
+   </g>
+   <g id="text_11">
+    <text style="fill:#362d30;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 132.624, 148.879217)" x="132.624" y="148.879217">SafeWatch-8B</text>
+   </g>
+   <g id="text_12">
+    <g id="patch_12">
+     <path d="M 301.903025 151.634717 
+L 335.1959 151.634717 
+L 335.1959 139.298904 
+L 301.903025 139.298904 
+z
+" style="fill:#ffffff;"/>
+    </g>
+    <text style="fill:#362d30;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 302.035025, 148.879217)" x="302.035025" y="148.879217">79.84</text>
+   </g>
+   <g id="text_13">
+    <text style="fill:#362d30;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:bold;text-anchor:end;" transform="rotate(-0, 132.624, 186.460945)" x="132.624" y="186.460945">ATPO-G-7B</text>
+   </g>
+   <g id="text_14">
+    <g id="patch_13">
+     <path d="M 318.042022 189.197883 
+L 351.334897 189.197883 
+L 351.334897 176.880633 
+L 318.042022 176.880633 
+z
+" style="fill:#ffffff;"/>
+    </g>
+    <text style="fill:#a33243;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:bold;text-anchor:start;" transform="rotate(-0, 318.174022, 186.460945)" x="318.174022" y="186.460945">88.17</text>
+   </g>
+   <g id="text_15">
+    <text style="fill:#362d30;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:bold;text-anchor:end;" transform="rotate(-0, 132.624, 224.033393)" x="132.624" y="224.033393">ATPO-C-7B</text>
+   </g>
+   <g id="text_16">
+    <g id="patch_14">
+     <path d="M 316.937673 226.77033 
+L 350.230548 226.77033 
+L 350.230548 214.45308 
+L 316.937673 214.45308 
+z
+" style="fill:#ffffff;"/>
+    </g>
+    <text style="fill:#a33243;font-family:Arial;font-size:13.2px;font-stretch:normal;font-style:normal;font-weight:bold;text-anchor:start;" transform="rotate(-0, 317.069673, 224.033393)" x="317.069673" y="224.033393">87.60</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p9a45c1ae7b">
+   <rect height="231.822" width="213.12" x="143.28" y="10.206"/>
+  </clipPath>
+ </defs>
+</svg>
