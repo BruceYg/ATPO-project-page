@@ -62,3 +62,54 @@
     if (viewer.open) renderZoom();
   });
 })();
+
+(() => {
+  const button = document.querySelector('[data-copy-bibtex]');
+  const code = document.querySelector('#bibtex-code');
+  const status = document.querySelector('[data-copy-status]');
+  if (!button || !code || !status) return;
+
+  let resetTimer;
+  button.addEventListener('click', async () => {
+    const text = code.textContent.trim();
+    let copied = false;
+
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+        copied = true;
+      }
+    } catch {
+      // Fall back to the legacy copy command when clipboard access is unavailable.
+    }
+
+    if (!copied) {
+      const field = document.createElement('textarea');
+      field.value = text;
+      field.setAttribute('readonly', '');
+      field.style.position = 'fixed';
+      field.style.opacity = '0';
+      document.body.append(field);
+      field.select();
+      try { copied = document.execCommand('copy'); } catch { /* Continue to manual selection. */ }
+      field.remove();
+      button.focus();
+    }
+
+    if (!copied) {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(code);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+
+    button.textContent = copied ? 'Copied!' : 'Copy failed';
+    status.textContent = copied ? 'BibTeX copied to clipboard.' : 'BibTeX selected. Copy it manually.';
+    clearTimeout(resetTimer);
+    resetTimer = setTimeout(() => {
+      button.textContent = 'Copy BibTeX';
+      status.textContent = '';
+    }, 2500);
+  });
+})();
