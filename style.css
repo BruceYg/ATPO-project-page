@@ -142,7 +142,7 @@ sup { position: relative; top: -.05em; margin-left: 2px; font-size: .65em; line-
   border: 0;
 }
 
-/* Ready-to-use styles for real links once the resource URLs are available. */
+/* Linked resources have hover and keyboard focus states. */
 a.resource:hover { border-color: var(--accent); }
 a.resource:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
 
@@ -309,6 +309,7 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
 .gain-row { color: var(--accent); }
 .citation-section { max-width: 800px; margin-inline: auto; text-align: center; }
 .bibtex-intro { max-width: 650px; margin: 20px auto 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.bibtex-block { margin: 24px 0 0; padding: 22px; overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--text); font-size: 13px; line-height: 1.75; text-align: left; white-space: pre-wrap; overflow-wrap: anywhere; }
 .citation-section .work-in-progress { margin: 30px 0 60px; text-align: left; }
 footer a { text-decoration: none; }
 
