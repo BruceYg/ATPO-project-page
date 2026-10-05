@@ -64,6 +64,123 @@
 })();
 
 (() => {
+  const resetVideos = new Map();
+  document.querySelectorAll('[data-video-demo]').forEach(demo => {
+    const video = demo.querySelector('[data-demo-video]');
+    const cover = demo.querySelector('[data-demo-cover]');
+    const reveal = demo.querySelector('[data-reveal-video]');
+    const hide = demo.querySelector('[data-hide-video]');
+    const error = demo.querySelector('[data-video-error]');
+    if (!video || !cover || !reveal || !hide || !error) return;
+
+    const reset = () => {
+      video.pause();
+      video.hidden = true;
+      if (video.hasAttribute('src')) {
+        video.removeAttribute('src');
+        video.load();
+      }
+      cover.hidden = false;
+      hide.hidden = true;
+      error.hidden = true;
+      reveal.setAttribute('aria-expanded', 'false');
+    };
+    resetVideos.set(demo, reset);
+
+    reveal.disabled = false;
+    reveal.addEventListener('click', () => {
+      // Only the active example can remain revealed.
+      resetVideos.forEach((resetOther, other) => {
+        if (other !== demo) resetOther();
+      });
+      error.hidden = true;
+      cover.hidden = true;
+      video.hidden = false;
+      hide.hidden = false;
+      reveal.setAttribute('aria-expanded', 'true');
+      video.muted = true;
+      // Assign the source only after consent; revealing never starts playback.
+      video.src = video.dataset.videoSrc;
+      video.load();
+      video.focus();
+    });
+
+    hide.addEventListener('click', () => {
+      reset();
+      reveal.focus();
+    });
+
+    video.addEventListener('error', () => {
+      if (video.hasAttribute('src')) error.hidden = false;
+    });
+  });
+
+  const tabList = document.querySelector('[data-demo-tabs]');
+  if (!tabList) return;
+  const tabs = [...tabList.querySelectorAll('[data-demo-tab]')];
+  const panels = [...document.querySelectorAll('[data-demo-panel]')];
+  if (!tabs.length || tabs.length !== panels.length) return;
+
+  const resetPanel = panel => {
+    panel.querySelectorAll('[data-video-demo]').forEach(demo => resetVideos.get(demo)?.());
+  };
+
+  panels.forEach(panel => {
+    const chooser = panel.querySelector('[data-demo-choices]');
+    if (!chooser) return;
+    const choices = [...chooser.querySelectorAll('[data-demo-choice]')];
+    const demos = [...panel.querySelectorAll('[data-video-demo]')];
+    const selectExample = choice => {
+      choices.forEach(button => button.setAttribute('aria-pressed', String(button === choice)));
+      demos.forEach(demo => {
+        const selected = demo.id === choice.dataset.demoChoice;
+        if (!selected) resetVideos.get(demo)?.();
+        demo.hidden = !selected;
+      });
+    };
+    choices.forEach(choice => choice.addEventListener('click', () => selectExample(choice)));
+    selectExample(choices[0]);
+    chooser.hidden = false;
+  });
+
+  const selectGroup = tab => {
+    tabs.forEach(button => {
+      const selected = button === tab;
+      button.setAttribute('aria-selected', String(selected));
+      button.tabIndex = selected ? 0 : -1;
+    });
+    panels.forEach(panel => {
+      const selected = panel.id === tab.getAttribute('aria-controls');
+      if (!selected) resetPanel(panel);
+      panel.hidden = !selected;
+    });
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectGroup(tab));
+    tab.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      selectGroup(tabs[next]);
+      tabs[next].focus();
+    });
+  });
+
+  panels.forEach((panel, index) => {
+    panel.setAttribute('role', 'tabpanel');
+    panel.setAttribute('aria-labelledby', tabs[index].id);
+    panel.tabIndex = 0;
+  });
+  selectGroup(tabs[0]);
+  tabList.hidden = false;
+})();
+
+(() => {
   const button = document.querySelector('[data-copy-bibtex]');
   const code = document.querySelector('#bibtex-code');
   const status = document.querySelector('[data-copy-status]');
