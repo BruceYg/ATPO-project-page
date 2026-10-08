@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="280.8pt" version="1.1" viewBox="0 0 360 280.8" width="360pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="control-ratio-str-title control-ratio-str-desc">
+ <title id="control-ratio-str-title">Achieved FN/FP ratio across static-reward settings</title>
+ <desc id="control-ratio-str-desc">Static Tversky reward (STR) on SafeWatch-Bench-Real, Table 3. The achieved FN/FP ratio does not change in a consistent order with the fixed penalty ratio: alpha/beta 1/5: 1.58; 1/2: 1.63; 1/1: 0.97; 2/1: 1.20; 5/1: 0.80.</desc>
+ <metadata>
+  <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.4.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linecap:butt;stroke-linejoin:round;}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 280.8 
+L 360 280.8 
+L 360 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 54 224.64 
+L 342 224.64 
+L 342 19.656 
+L 54 19.656 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 75.807706, 240.945156)" x="75.807706" y="240.945156">1/5</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 145.267019, 240.945156)" x="145.267019" y="240.945156">1/2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 197.81096, 240.945156)" x="197.81096" y="240.945156">1/1</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 250.354901, 240.945156)" x="250.354901" y="240.945156">2/1</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 319.814214, 240.945156)" x="319.814214" y="240.945156">5/1</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 198, 260.9925)" x="198" y="260.9925">Fixed penalty ratio α / β</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path clip-path="url(#pca79d6d863)" d="M 54 224.64 
+L 342 224.64 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.9;"/>
+     </g>
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 47, 229.292578)" x="47" y="229.292578">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path clip-path="url(#pca79d6d863)" d="M 54 173.394 
+L 342 173.394 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.9;"/>
+     </g>
+     <g id="line2d_9"/>
+     <g id="text_8">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 47, 178.046578)" x="47" y="178.046578">0.5</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path clip-path="url(#pca79d6d863)" d="M 54 122.148 
+L 342 122.148 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.9;"/>
+     </g>
+     <g id="line2d_11"/>
+     <g id="text_9">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 47, 126.800578)" x="47" y="126.800578">1</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path clip-path="url(#pca79d6d863)" d="M 54 70.902 
+L 342 70.902 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.9;"/>
+     </g>
+     <g id="line2d_13"/>
+     <g id="text_10">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 47, 75.554578)" x="47" y="75.554578">1.5</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <path clip-path="url(#pca79d6d863)" d="M 54 19.656 
+L 342 19.656 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.9;"/>
+     </g>
+     <g id="line2d_15"/>
+     <g id="text_11">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 47, 24.308578)" x="47" y="24.308578">2</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-90, 18.34625, 122.148)" x="18.34625" y="122.148">Achieved FN / FP</text>
+    </g>
+   </g>
+   <g id="line2d_16">
+    <path clip-path="url(#pca79d6d863)" d="M 54 122.148 
+L 342 122.148 
+" style="fill:none;stroke:#c9b3b9;stroke-dasharray:4.4,3.3;stroke-dashoffset:0;stroke-width:1.1;"/>
+   </g>
+   <g id="line2d_17">
+    <path clip-path="url(#pca79d6d863)" d="M 75.807706 62.70264 
+L 145.267019 57.57804 
+L 197.81096 125.22276 
+L 250.354901 101.6496 
+L 319.814214 142.6464 
+" style="fill:none;stroke:#8f747c;stroke-linecap:square;stroke-width:2.2;"/>
+    <defs>
+     <path d="M -0 4.525483 
+L 4.525483 0 
+L 0 -4.525483 
+L -4.525483 -0 
+z
+" id="mecf75337a9" style="stroke:#ffffff;stroke-linejoin:miter;"/>
+    </defs>
+    <g clip-path="url(#pca79d6d863)">
+     <use style="fill:#8f747c;stroke:#ffffff;stroke-linejoin:miter;" x="75.807706" xlink:href="#mecf75337a9" y="62.70264"/>
+     <use style="fill:#8f747c;stroke:#ffffff;stroke-linejoin:miter;" x="145.267019" xlink:href="#mecf75337a9" y="57.57804"/>
+     <use style="fill:#8f747c;stroke:#ffffff;stroke-linejoin:miter;" x="197.81096" xlink:href="#mecf75337a9" y="125.22276"/>
+     <use style="fill:#8f747c;stroke:#ffffff;stroke-linejoin:miter;" x="250.354901" xlink:href="#mecf75337a9" y="101.6496"/>
+     <use style="fill:#8f747c;stroke:#ffffff;stroke-linejoin:miter;" x="319.814214" xlink:href="#mecf75337a9" y="142.6464"/>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="fill:#706065;font-family:Arial;font-size:11px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 340.28359, 116.37453)" x="340.28359" y="116.37453">FN = FP</text>
+   </g>
+   <g id="text_14">
+    <text style="fill:#8f747c;font-family:Arial;font-size:12.8px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 75.807706, 54.70264)" x="75.807706" y="54.70264">1.58</text>
+   </g>
+   <g id="text_15">
+    <text style="fill:#8f747c;font-family:Arial;font-size:12.8px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 145.267019, 49.57804)" x="145.267019" y="49.57804">1.63</text>
+   </g>
+   <g id="text_16">
+    <text style="fill:#8f747c;font-family:Arial;font-size:12.8px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 197.81096, 140.22276)" x="197.81096" y="140.22276">0.97</text>
+   </g>
+   <g id="text_17">
+    <text style="fill:#8f747c;font-family:Arial;font-size:12.8px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 250.354901, 93.6496)" x="250.354901" y="93.6496">1.20</text>
+   </g>
+   <g id="text_18">
+    <text style="fill:#8f747c;font-family:Arial;font-size:12.8px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 319.814214, 157.6464)" x="319.814214" y="157.6464">0.80</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pca79d6d863">
+   <rect height="204.984" width="288" x="54" y="19.656"/>
+  </clipPath>
+ </defs>
+</svg>

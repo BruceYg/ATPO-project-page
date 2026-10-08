@@ -188,6 +188,7 @@
     panel.querySelectorAll('[data-video-demo]').forEach(demo => resetVideos.get(demo)?.());
   };
 
+  const examplePickers = new Map();
   panels.forEach(panel => {
     const chooser = panel.querySelector('[data-demo-choices]');
     if (!chooser) return;
@@ -202,6 +203,10 @@
       });
     };
     choices.forEach(choice => choice.addEventListener('click', () => selectExample(choice)));
+    examplePickers.set(panel, id => {
+      const choice = choices.find(button => button.dataset.demoChoice === id);
+      if (choice) selectExample(choice);
+    });
     selectExample(choices[0]);
     chooser.hidden = false;
   });
@@ -241,6 +246,73 @@
   });
   selectGroup(tabs[0]);
   tabList.hidden = false;
+
+  // Previous/next buttons step through all examples, switching topic tabs as needed.
+  const allDemos = [...document.querySelectorAll('[data-video-demo]')];
+  const showDemo = demo => {
+    const panel = demo.closest('[data-demo-panel]');
+    const tab = tabs[panels.indexOf(panel)];
+    if (tab && tab.getAttribute('aria-selected') !== 'true') selectGroup(tab);
+    examplePickers.get(panel)?.(demo.id);
+  };
+  allDemos.forEach((demo, index) => {
+    demo.querySelectorAll('[data-demo-step]').forEach(button => {
+      const step = Number(button.dataset.demoStep);
+      const target = allDemos[index + step];
+      button.disabled = !target;
+      button.hidden = false;
+      button.addEventListener('click', () => {
+        if (!target) return;
+        showDemo(target);
+        // Keep keyboard focus on the matching control in the newly shown example.
+        const same = target.querySelector(`[data-demo-step="${step}"]`);
+        (same && !same.disabled ? same : target.querySelector('[data-demo-step]:not(:disabled)'))?.focus();
+      });
+    });
+  });
+})();
+
+(() => {
+  const nav = document.querySelector('[data-section-nav]');
+  if (!nav) return;
+  const items = [...nav.querySelectorAll('.section-nav-links a')]
+    .map(link => [link, document.querySelector(link.hash)])
+    .filter(([, section]) => section);
+  let current = -2;
+  let frame;
+
+  const update = () => {
+    frame = undefined;
+    nav.classList.toggle('is-stuck', nav.getBoundingClientRect().top <= 0);
+
+    // The current section is the last one whose top has passed 30% of the viewport.
+    const line = window.innerHeight * 0.3;
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    let next = -1;
+    items.forEach(([, section], index) => {
+      if (section.getBoundingClientRect().top <= line) next = index;
+    });
+    if (atBottom && next >= 0) next = items.length - 1;
+    if (next === current) return;
+    current = next;
+    items.forEach(([link], index) => {
+      if (index === current) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+
+    // On narrow screens the links scroll sideways; keep the current one visible.
+    const link = items[current]?.[0];
+    const bar = link?.parentElement;
+    if (bar && bar.scrollWidth > bar.clientWidth) {
+      bar.scrollLeft = link.offsetLeft - bar.offsetLeft - (bar.clientWidth - link.offsetWidth) / 2;
+    }
+  };
+  const schedule = () => {
+    if (!frame) frame = requestAnimationFrame(update);
+  };
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  update();
 })();
 
 (() => {

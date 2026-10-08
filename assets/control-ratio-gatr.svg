@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="280.8pt" version="1.1" viewBox="0 0 360 280.8" width="360pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="control-ratio-gatr-title control-ratio-gatr-desc">
+ <title id="control-ratio-gatr-title">Achieved FN/FP ratio across G-ATR training targets</title>
+ <desc id="control-ratio-gatr-desc">Adaptive reward (G-ATR) on SafeWatch-Bench-Real, Table 3. Achieved FN/FP ratio rises with every step of the training target: target 0.2: 0.31; target 0.5: 0.76; target 1: 0.84; target 2: 1.40; target 5: 1.75.</desc>
+ <metadata>
+  <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.4.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linecap:butt;stroke-linejoin:round;}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 280.8 
+L 360 280.8 
+L 360 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 54 224.64 
+L 342 224.64 
+L 342 19.656 
+L 54 19.656 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 75.807706, 240.945156)" x="75.807706" y="240.945156">0.2</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 145.267019, 240.945156)" x="145.267019" y="240.945156">0.5</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 197.81096, 240.945156)" x="197.81096" y="240.945156">1</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 250.354901, 240.945156)" x="250.354901" y="240.945156">2</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 319.814214, 240.945156)" x="319.814214" y="240.945156">5</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 198, 260.9925)" x="198" y="260.9925">Training target r* = FN / FP</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path clip-path="url(#pca79d6d863)" d="M 54 224.64 
+L 342 224.64 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.9;"/>
+     </g>
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 47, 229.292578)" x="47" y="229.292578">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path clip-path="url(#pca79d6d863)" d="M 54 173.394 
+L 342 173.394 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.9;"/>
+     </g>
+     <g id="line2d_9"/>
+     <g id="text_8">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 47, 178.046578)" x="47" y="178.046578">0.5</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path clip-path="url(#pca79d6d863)" d="M 54 122.148 
+L 342 122.148 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.9;"/>
+     </g>
+     <g id="line2d_11"/>
+     <g id="text_9">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 47, 126.800578)" x="47" y="126.800578">1</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path clip-path="url(#pca79d6d863)" d="M 54 70.902 
+L 342 70.902 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.9;"/>
+     </g>
+     <g id="line2d_13"/>
+     <g id="text_10">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 47, 75.554578)" x="47" y="75.554578">1.5</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <path clip-path="url(#pca79d6d863)" d="M 54 19.656 
+L 342 19.656 
+" style="fill:none;stroke:#eee6e8;stroke-linecap:square;stroke-width:0.9;"/>
+     </g>
+     <g id="line2d_15"/>
+     <g id="text_11">
+      <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 47, 24.308578)" x="47" y="24.308578">2</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="fill:#706065;font-family:Arial;font-size:13px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-90, 18.34625, 122.148)" x="18.34625" y="122.148">Achieved FN / FP</text>
+    </g>
+   </g>
+   <g id="line2d_16">
+    <path clip-path="url(#pca79d6d863)" d="M 54 122.148 
+L 342 122.148 
+" style="fill:none;stroke:#c9b3b9;stroke-dasharray:4.4,3.3;stroke-dashoffset:0;stroke-width:1.1;"/>
+   </g>
+   <g id="line2d_17">
+    <path clip-path="url(#pca79d6d863)" d="M 75.807706 192.86748 
+L 145.267019 146.74608 
+L 197.81096 138.54672 
+L 250.354901 81.1512 
+L 319.814214 45.279 
+" style="fill:none;stroke:#a33243;stroke-linecap:square;stroke-width:2.2;"/>
+    <defs>
+     <path d="M 0 3.5 
+C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874 
+C 3.131218 1.81853 3.5 0.928211 3.5 0 
+C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874 
+C 1.81853 -3.131218 0.928211 -3.5 0 -3.5 
+C -0.928211 -3.5 -1.81853 -3.131218 -2.474874 -2.474874 
+C -3.131218 -1.81853 -3.5 -0.928211 -3.5 0 
+C -3.5 0.928211 -3.131218 1.81853 -2.474874 2.474874 
+C -1.81853 3.131218 -0.928211 3.5 0 3.5 
+z
+" id="m3e9c6719d5" style="stroke:#ffffff;"/>
+    </defs>
+    <g clip-path="url(#pca79d6d863)">
+     <use style="fill:#a33243;stroke:#ffffff;" x="75.807706" xlink:href="#m3e9c6719d5" y="192.86748"/>
+     <use style="fill:#a33243;stroke:#ffffff;" x="145.267019" xlink:href="#m3e9c6719d5" y="146.74608"/>
+     <use style="fill:#a33243;stroke:#ffffff;" x="197.81096" xlink:href="#m3e9c6719d5" y="138.54672"/>
+     <use style="fill:#a33243;stroke:#ffffff;" x="250.354901" xlink:href="#m3e9c6719d5" y="81.1512"/>
+     <use style="fill:#a33243;stroke:#ffffff;" x="319.814214" xlink:href="#m3e9c6719d5" y="45.279"/>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="fill:#706065;font-family:Arial;font-size:11px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 340.28359, 116.37453)" x="340.28359" y="116.37453">FN = FP</text>
+   </g>
+   <g id="text_14">
+    <text style="fill:#a33243;font-family:Arial;font-size:12.8px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 75.807706, 207.86748)" x="75.807706" y="207.86748">0.31</text>
+   </g>
+   <g id="text_15">
+    <text style="fill:#a33243;font-family:Arial;font-size:12.8px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 141.267019, 138.74608)" x="141.267019" y="138.74608">0.76</text>
+   </g>
+   <g id="text_16">
+    <text style="fill:#a33243;font-family:Arial;font-size:12.8px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 199.81096, 153.54672)" x="199.81096" y="153.54672">0.84</text>
+   </g>
+   <g id="text_17">
+    <text style="fill:#a33243;font-family:Arial;font-size:12.8px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 246.354901, 73.1512)" x="246.354901" y="73.1512">1.40</text>
+   </g>
+   <g id="text_18">
+    <text style="fill:#a33243;font-family:Arial;font-size:12.8px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 319.814214, 37.279)" x="319.814214" y="37.279">1.75</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pca79d6d863">
+   <rect height="204.984" width="288" x="54" y="19.656"/>
+  </clipPath>
+ </defs>
+</svg>

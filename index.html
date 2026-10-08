@@ -6,13 +6,26 @@
     <meta name="description" content="ATPO: Controllable Multi-label Video Safety Detection via Adaptive Tversky Policy Optimization. Method, controllable precision-recall trade-offs, benchmark results, and project resources.">
     <meta name="theme-color" content="#fffafa">
     <title>ATPO | Controllable Multi-label Video Safety Detection</title>
+    <link rel="canonical" href="https://bruceyg.github.io/ATPO-project-page/">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ATPO">
+    <meta property="og:url" content="https://bruceyg.github.io/ATPO-project-page/">
+    <meta property="og:title" content="ATPO: Controllable Multi-label Video Safety Detection">
+    <meta property="og:description" content="Adaptive Tversky Policy Optimization (NeurIPS 2026): reinforcement learning for multi-label video safety detection with controllable precision–recall trade-offs.">
+    <meta property="og:image" content="https://bruceyg.github.io/ATPO-project-page/assets/social-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ATPO paper title above the motivation figure comparing fixed-operating-point binary systems with controllable multi-label systems.">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#overview">Skip to research overview</a>
     <main>
-      <header class="paper-header">
+      <header class="paper-header" id="top">
         <p class="project-name">ATPO</p>
         <h1>Controllable Multi-label Video Safety Detection via <span>Adaptive Tversky Policy Optimization</span></h1>
         <p class="venue">NeurIPS 2026</p>
@@ -43,6 +56,15 @@
 
         <ul class="resources" aria-label="Project resources">
           <li>
+            <a class="resource resource-primary" href="https://arxiv.org/pdf/2610.02019" target="_blank" rel="noopener noreferrer">
+              <!-- arXiv icon: https://github.com/simple-icons/simple-icons/blob/develop/icons/arxiv.svg -->
+              <svg class="resource-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M3.8423 0a1.0037 1.0037 0 0 0-.922.6078c-.1536.3687-.0438.6275.2938 1.1113l6.9185 8.3597-1.0223 1.1058a1.0393 1.0393 0 0 0 .003 1.4229l1.2292 1.3135-5.4391 6.4444c-.2803.299-.4538.823-.2971 1.1986a1.0253 1.0253 0 0 0 .9585.635.9133.9133 0 0 0 .6891-.3405l5.783-6.126 7.4902 8.0051a.8527.8527 0 0 0 .6835.2597.9575.9575 0 0 0 .8777-.6138c.1577-.377-.017-.7502-.306-1.1407l-7.0518-8.3418 1.0632-1.13a.9626.9626 0 0 0 .0089-1.3165L4.6336.4639s-.3733-.4535-.768-.463zm0 .272h.0166c.2179.0052.4874.2715.5644.3639l.005.006.0052.0055 10.169 10.9905a.6915.6915 0 0 1-.0072.945l-1.0666 1.133-1.4982-1.7724-8.5994-10.39c-.3286-.472-.352-.6183-.2592-.841a.7307.7307 0 0 1 .6704-.4401Zm14.341 1.5701a.877.877 0 0 0-.6554.2418l-5.6962 6.1584 1.6944 1.8319 5.3089-6.5138c.3251-.4335.479-.6603.3247-1.0292a1.1205 1.1205 0 0 0-.9763-.689zm-7.6557 12.2823 1.3186 1.4135-5.7864 6.1295a.6494.6494 0 0 1-.4959.26.7516.7516 0 0 1-.706-.4669c-.1119-.2682.0359-.6864.2442-.9083l.0051-.0055.0047-.0055z"/>
+              </svg>
+              <span class="resource-copy"><span class="resource-title"><span class="visually-hidden">arXiv </span>Paper</span></span>
+            </a>
+          </li>
+          <li>
             <a class="resource" href="https://github.com/BruceYg/ATPO" target="_blank" rel="noopener noreferrer">
               <svg class="resource-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                 <path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.64 1.22 3.28.94.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/>
@@ -56,30 +78,29 @@
               <span class="resource-copy"><span class="resource-title"><span class="visually-hidden">Hugging Face </span>Models</span></span>
             </a>
           </li>
-          <li>
-            <a class="resource" href="https://arxiv.org/pdf/2610.02019" target="_blank" rel="noopener noreferrer">
-              <!-- arXiv icon: https://github.com/simple-icons/simple-icons/blob/develop/icons/arxiv.svg -->
-              <svg class="resource-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M3.8423 0a1.0037 1.0037 0 0 0-.922.6078c-.1536.3687-.0438.6275.2938 1.1113l6.9185 8.3597-1.0223 1.1058a1.0393 1.0393 0 0 0 .003 1.4229l1.2292 1.3135-5.4391 6.4444c-.2803.299-.4538.823-.2971 1.1986a1.0253 1.0253 0 0 0 .9585.635.9133.9133 0 0 0 .6891-.3405l5.783-6.126 7.4902 8.0051a.8527.8527 0 0 0 .6835.2597.9575.9575 0 0 0 .8777-.6138c.1577-.377-.017-.7502-.306-1.1407l-7.0518-8.3418 1.0632-1.13a.9626.9626 0 0 0 .0089-1.3165L4.6336.4639s-.3733-.4535-.768-.463zm0 .272h.0166c.2179.0052.4874.2715.5644.3639l.005.006.0052.0055 10.169 10.9905a.6915.6915 0 0 1-.0072.945l-1.0666 1.133-1.4982-1.7724-8.5994-10.39c-.3286-.472-.352-.6183-.2592-.841a.7307.7307 0 0 1 .6704-.4401Zm14.341 1.5701a.877.877 0 0 0-.6554.2418l-5.6962 6.1584 1.6944 1.8319 5.3089-6.5138c.3251-.4335.479-.6603.3247-1.0292a1.1205 1.1205 0 0 0-.9763-.689zm-7.6557 12.2823 1.3186 1.4135-5.7864 6.1295a.6494.6494 0 0 1-.4959.26.7516.7516 0 0 1-.706-.4669c-.1119-.2682.0359-.6864.2442-.9083l.0051-.0055.0047-.0055z"/>
-              </svg>
-              <span class="resource-copy"><span class="resource-title"><span class="visually-hidden">arXiv </span>Paper</span></span>
-            </a>
-          </li>
         </ul>
-        <nav class="section-nav" aria-label="On this page">
-          <a href="#method">Method</a><a href="#control">Controllability</a><a href="#results">Results</a><a href="#demos">Demos</a><a href="#citation">BibTeX</a>
-        </nav>
+
+        <ul class="hero-stats" aria-label="Key results">
+          <li><a href="#results"><span class="hero-stat-value">75.44</span><span class="hero-stat-label">Jaccard on SafeWatch-Bench-Real</span><span class="hero-stat-detail">up from 40.66 for the zero-shot base model</span></a></li>
+          <li><a href="#results"><span class="hero-stat-value">+5.35</span><span class="hero-stat-label">Jaccard over static-reward GRPO</span><span class="hero-stat-detail">from the same SFT initialization</span></a></li>
+          <li><a href="#control"><span class="hero-stat-value">0.2 <span aria-hidden="true">→</span><span class="visually-hidden">to</span> 5</span><span class="hero-stat-label">FN/FP targets steer the trade-off</span><span class="hero-stat-detail">recall 86.55 → 67.62 · precision 66.33 → 78.56</span></a></li>
+        </ul>
       </header>
+
+      <nav class="section-nav" aria-label="On this page" data-section-nav>
+        <a class="section-nav-brand" href="#top">ATPO</a>
+        <div class="section-nav-links"><a href="#method">Method</a><a href="#control">Controllability</a><a href="#results">Results</a><a href="#demos">Demos</a><a href="#citation">BibTeX</a></div>
+      </nav>
 
       <section id="overview" class="overview" aria-labelledby="overview-heading">
         <h2 id="overview-heading">Multi-label video safety.<br><span>Different policies, different error trade-offs.</span></h2>
         <p class="section-lead">A video can contain several types of harmful content at once. ATPO trains models to detect these overlapping categories while steering the balance between missed labels and false alarms.</p>
         <figure class="paper-figure">
           <a class="figure-link" href="./assets/overview-large.webp" data-figure="Motivation: multi-label video safety" aria-label="Enlarge the motivation figure">
-            <img src="./assets/overview.webp" width="1200" height="554" alt="Illustrative moderation policies: fixed binary decisions can miss harmful content, while ATPO uses training targets to produce models with category-aware error trade-offs." decoding="async" fetchpriority="high">
+            <img src="./assets/overview.webp" srcset="./assets/overview.webp 1200w, ./assets/overview-large.webp 2400w" sizes="(max-width: 1108px) calc(100vw - 60px), 1034px" width="1200" height="554" alt="Illustrative moderation policies: fixed binary decisions can miss harmful content, while ATPO uses training targets to produce models with category-aware error trade-offs." decoding="async" fetchpriority="high">
             <span class="enlarge-label" aria-hidden="true">↗ Enlarge figure</span>
           </a>
-          <figcaption>Different applications may prioritize recall or precision. Target ratios guide ATPO training; each configuration is evaluated through its resulting model checkpoint. The policy scenarios above are illustrative.</figcaption>
+          <figcaption>Different applications may prioritize recall or precision; ATPO lets each trained model target a different balance. The policy scenarios are illustrative.</figcaption>
         </figure>
       </section>
 
@@ -94,15 +115,15 @@
         <p class="section-lead">Adaptive Tversky Policy Optimization combines multi-label supervision with reinforcement learning. Its reward adapts to the model’s observed false positives and false negatives during training.</p>
         <figure class="paper-figure">
           <a class="figure-link" href="./assets/method-large.webp" data-figure="The category-aware ATPO training loop" aria-label="Enlarge the ATPO method figure">
-            <img src="./assets/method.webp" width="1200" height="609" alt="Category-aware ATPO training: SFT warmup, GRPO rollouts, moving averages of false positives and false negatives, error-ratio estimation, and controller updates to the Tversky reward weights." loading="lazy" decoding="async">
+            <img src="./assets/method.webp" srcset="./assets/method.webp 1200w, ./assets/method-large.webp 2400w" sizes="(max-width: 1108px) calc(100vw - 60px), 1034px" width="1200" height="609" alt="Category-aware ATPO training: SFT warmup, GRPO rollouts, moving averages of false positives and false negatives, error-ratio estimation, and controller updates to the Tversky reward weights." loading="lazy" decoding="async">
             <span class="enlarge-label" aria-hidden="true">↗ Enlarge figure</span>
           </a>
-          <figcaption>The category-aware training loop (C-ATR). A sample rollout predicts Violence but misses Abuse; the controller uses accumulated error statistics to adjust reward weights for subsequent training steps.</figcaption>
+          <figcaption>The category-aware training loop (C-ATR). A sample rollout predicts Violence but misses Abuse; the controller uses accumulated error statistics to adjust reward weights for subsequent training steps. The step numbers below match the figure.</figcaption>
         </figure>
         <ol class="method-steps">
-          <li><span class="step-number" aria-hidden="true">01</span><h3>Learn the categories</h3><p>Supervised fine-tuning warms up the VLM using videos and their ground-truth label sets.</p></li>
-          <li><span class="step-number" aria-hidden="true">02</span><h3>Measure the errors</h3><p>GRPO samples predictions. Moving averages track false-positive and false-negative counts.</p></li>
-          <li><span class="step-number" aria-hidden="true">03</span><h3>Adapt the reward</h3><p>The controller compares the observed FN/FP ratio with its target and updates the Tversky penalties.</p></li>
+          <li><span class="step-number" aria-hidden="true">Step 1</span><h3>Learn the categories</h3><p>Supervised fine-tuning warms up the VLM using videos and their ground-truth label sets.</p></li>
+          <li><span class="step-number" aria-hidden="true">Steps 2–3</span><h3>Measure the errors</h3><p>GRPO samples predictions. Moving averages track false-positive and false-negative counts.</p></li>
+          <li><span class="step-number" aria-hidden="true">Steps 4–5</span><h3>Adapt the reward</h3><p>The controller compares the observed FN/FP ratio with its target and updates the Tversky penalties.</p></li>
         </ol>
         <div class="variant-grid">
           <div><h3><span class="variant-tag">G-ATR</span> Global control</h3><p>One controller aggregates errors across categories and sets a shared trade-off.</p></div>
@@ -117,13 +138,20 @@
         <p class="research-note"><strong>Control happens during training.</strong> Changing a target means training and evaluating a model configuration. It is not an inference-time adjustment to a fixed checkpoint, and the achieved error ratio need not equal the target.</p>
 
         <div class="subsection-heading"><h3>A global shift in precision and recall</h3><span class="source-note">SafeWatch-Bench-Real · Table 3</span></div>
-        <p class="body-copy">Across five G-ATR training targets, recall falls from <strong>86.55 to 67.62</strong>, while the precision-to-recall ratio rises from <strong>0.77 to 1.16</strong>. The observed FN/FP ratio also increases monotonically.</p>
+        <p class="body-copy">Across five G-ATR training targets, recall falls from <strong>86.55 to 67.62</strong>, while the precision-to-recall ratio rises from <strong>0.77 to 1.16</strong>.</p>
         <figure class="chart-figure global-chart">
           <img src="./assets/global-control.svg" width="1200" height="996" alt="G-ATR global control. At training targets 0.2, 0.5, 1, 2, and 5, precision is 66.33, 76.18, 75.74, 75.72, and 78.56; recall is 86.55, 80.71, 78.81, 69.05, and 67.62. Each point is a separately trained configuration." loading="lazy" decoding="async">
-          <figcaption>Each point represents a model trained with a different target. Lines connect the evaluated settings; they do not describe a runtime control.</figcaption>
+          <figcaption>Each point is a separately trained model.</figcaption>
         </figure>
+
+        <div class="subsection-heading"><h3>Adaptive versus static rewards</h3><span class="source-note">SafeWatch-Bench-Real · Table 3</span></div>
+        <p class="body-copy">With the adaptive reward, the achieved FN/FP ratio rises at every step of the target, from <strong>0.31 to 1.75</strong>. With a static Tversky reward (STR), changing the fixed penalty ratio α/β leaves the ratio between 0.80 and 1.63, in no consistent order.</p>
+        <div class="benchmark-grid">
+          <figure class="chart-figure"><h3>Adaptive reward · G-ATR</h3><img src="./assets/control-ratio-gatr.svg" width="1200" height="936" alt="Achieved FN/FP ratio for G-ATR rises with the training target: target 0.2 gives 0.31, 0.5 gives 0.76, 1 gives 0.84, 2 gives 1.40, and 5 gives 1.75." loading="lazy" decoding="async"><figcaption>Lower targets favor recall; higher targets favor precision</figcaption></figure>
+          <figure class="chart-figure"><h3>Static reward · STR</h3><img src="./assets/control-ratio-str.svg" width="1200" height="936" alt="Achieved FN/FP ratio for STR does not follow the fixed penalty ratio: alpha/beta 1/5 gives 1.58, 1/2 gives 1.63, 1/1 gives 0.97, 2/1 gives 1.20, and 5/1 gives 0.80." loading="lazy" decoding="async"><figcaption>Penalty weights stay fixed throughout training</figcaption></figure>
+        </div>
         <details class="data-details">
-          <summary>View global control values and the static-reward comparison</summary>
+          <summary>View all global-control and static-reward values</summary>
           <p class="detail-intro">G-ATR uses target ratio <i>r*</i>; STR uses fixed penalty ratio α/β. These are different training parameters. Precision and recall are reported on a 0–100 scale.</p>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Global control comparison table">
             <table><caption>Global control on SafeWatch-Bench-Real (Table 3)</caption><thead><tr><th scope="col">Method</th><th scope="col">Training setting</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">P/R</th><th scope="col">FN/FP</th></tr></thead><tbody>
@@ -214,17 +242,18 @@
         <p class="eyebrow">Video demos</p>
         <h2 id="demos-heading">See how the predictions change</h2>
         <p class="section-lead">Explore five videos: what adaptive rewards detect, the trade-off in higher recall, and a focus on individual safety categories.</p>
-        <p class="demo-intro-note">Each comparison uses recorded outputs from separately trained models. Videos stay covered until you choose to reveal them; playback is silent.</p>
+        <p class="demo-intro-note">Videos stay covered until you choose to reveal them; playback is silent.</p>
         <div class="demo-tabs" role="tablist" aria-label="Demonstration topics" data-demo-tabs hidden><button id="demo-tab-adaptive" type="button" role="tab" data-demo-tab aria-controls="demo-panel-adaptive" aria-selected="true" tabindex="0"><span aria-hidden="true">01</span>Adaptive rewards</button><button id="demo-tab-recall" type="button" role="tab" data-demo-tab aria-controls="demo-panel-recall" aria-selected="false" tabindex="-1"><span aria-hidden="true">02</span>Recall trade-off</button><button id="demo-tab-category" type="button" role="tab" data-demo-tab aria-controls="demo-panel-category" aria-selected="false" tabindex="-1"><span aria-hidden="true">03</span>Category focus</button></div>
         <section class="demo-group" id="demo-panel-adaptive" data-demo-panel aria-labelledby="demo-group-adaptive">
       <div class="demo-group-intro"><h3 id="demo-group-adaptive">Adaptive rewards</h3><p>Compare a static reward with ATPO’s adaptive reward on two different safety challenges.</p></div>
       <div class="demo-choices" role="group" aria-label="Choose an example" data-demo-choices hidden><button type="button" data-demo-choice="str-vs-atpo-robbery" aria-controls="str-vs-atpo-robbery" aria-pressed="true">Robbery</button><button type="button" data-demo-choice="str-vs-atpo-kitten" aria-controls="str-vs-atpo-kitten" aria-pressed="false">Animal abuse</button></div>
       <article class="demo-card" id="str-vs-atpo-robbery" data-video-demo aria-labelledby="str-vs-atpo-robbery-heading">
-      <header class="demo-header"><div><p class="demo-kicker">Detecting overlapping harms</p><h4 id="str-vs-atpo-robbery-heading">Robbery in a shop</h4></div><span class="demo-case-count">Example 1 of 5</span></header>
+      <header class="demo-header"><div><p class="demo-kicker">Detecting overlapping harms</p><h4 id="str-vs-atpo-robbery-heading">Robbery in a shop</h4></div><div class="demo-stepper"><button type="button" class="demo-step" data-demo-step="-1" aria-label="Previous example" hidden><span aria-hidden="true">‹</span></button><span class="demo-case-count">Example 1 of 5</span><button type="button" class="demo-step" data-demo-step="1" aria-label="Next example" hidden><span aria-hidden="true">›</span></button></div></header>
       <div class="demo-main">
         <div class="demo-media">
           <div class="demo-stage">
             <div class="demo-cover" data-demo-cover>
+              <img class="demo-cover-image" src="./assets/posters/robbery-10.jpg" alt="" loading="lazy" decoding="async">
               <svg class="demo-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.7 5.2A11 11 0 0 1 12 5c6 0 10 7 10 7a19 19 0 0 1-3.3 3.9M6.2 6.2A19 19 0 0 0 2 12s4 7 10 7a10 10 0 0 0 5.7-1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <p class="demo-cover-title">Video hidden</p>
               <p id="str-vs-atpo-robbery-warning" class="demo-warning">Contains a robbery and threats of violence.</p>
@@ -245,26 +274,27 @@
       <div class="demo-comparison"><section class="demo-model" data-model-id="GRPO-STR" aria-labelledby="str-vs-atpo-robbery-model-0">
       <p class="demo-kicker">Static reward</p><h5 id="str-vs-atpo-robbery-model-0">GRPO</h5>
       <p class="demo-label-heading">Predicted labels</p>
-      <ul class="demo-labels" aria-label="GRPO predicted labels"><li>Illegal</li></ul>
-      <p class="demo-outcome demo-missed">Missed label: Violence</p>
+      <ul class="demo-labels" aria-label="GRPO predicted labels, compared with ground truth"><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Illegal<span class="visually-hidden"> (correct)</span></li><li class="label-missed">Violence <span class="label-tag">missed</span></li></ul>
+      <p class="demo-outcome demo-error">Missed label: Violence</p>
       <details class="demo-reasoning"><summary>View response excerpts</summary><blockquote>
         <p><strong>C3 (Threats, Violence &amp; Harm)</strong>: There is no violence or harm in the video.</p><p><strong>C5 (Illegal/Regulated Activities)</strong>: The video shows a robbery, which is an illegal activity.</p>
       </blockquote></details>
     </section><section class="demo-model demo-model-atpo" data-model-id="ATPO-G-Paper" aria-labelledby="str-vs-atpo-robbery-model-1">
       <p class="demo-kicker">Adaptive reward</p><h5 id="str-vs-atpo-robbery-model-1">ATPO</h5>
       <p class="demo-label-heading">Predicted labels</p>
-      <ul class="demo-labels" aria-label="ATPO predicted labels"><li>Violence</li><li>Illegal</li></ul>
-      <p class="demo-outcome demo-matched">Matches all ground-truth labels</p>
+      <ul class="demo-labels" aria-label="ATPO predicted labels, compared with ground truth"><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Violence<span class="visually-hidden"> (correct)</span></li><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Illegal<span class="visually-hidden"> (correct)</span></li></ul>
+      <p class="demo-outcome demo-matched"><span aria-hidden="true">✓ </span>Matches all ground-truth labels</p>
       <details class="demo-reasoning"><summary>View response excerpts</summary><blockquote>
         <p>C3: Threats, Violence &amp; Harm - The video shows a robbery in progress, which involves violence and the threat of harm to the employees and customers.</p><p>C5: Illegal/Regulated Activities - The video shows a robbery, which is an illegal activity.</p>
       </blockquote></details>
     </section></div>
     </article><article class="demo-card" id="str-vs-atpo-kitten" data-video-demo aria-labelledby="str-vs-atpo-kitten-heading">
-      <header class="demo-header"><div><p class="demo-kicker">From a missed harm to a detected label</p><h4 id="str-vs-atpo-kitten-heading">Recognizing animal abuse</h4></div><span class="demo-case-count">Example 2 of 5</span></header>
+      <header class="demo-header"><div><p class="demo-kicker">From a missed harm to a detected label</p><h4 id="str-vs-atpo-kitten-heading">Recognizing animal abuse</h4></div><div class="demo-stepper"><button type="button" class="demo-step" data-demo-step="-1" aria-label="Previous example" hidden><span aria-hidden="true">‹</span></button><span class="demo-case-count">Example 2 of 5</span><button type="button" class="demo-step" data-demo-step="1" aria-label="Next example" hidden><span aria-hidden="true">›</span></button></div></header>
       <div class="demo-main">
         <div class="demo-media">
           <div class="demo-stage demo-stage-portrait">
             <div class="demo-cover" data-demo-cover>
+              <img class="demo-cover-image" src="./assets/posters/kitten.jpg" alt="" loading="lazy" decoding="async">
               <svg class="demo-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.7 5.2A11 11 0 0 1 12 5c6 0 10 7 10 7a19 19 0 0 1-3.3 3.9M6.2 6.2A19 19 0 0 0 2 12s4 7 10 7a10 10 0 0 0 5.7-1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <p class="demo-cover-title">Video hidden</p>
               <p id="str-vs-atpo-kitten-warning" class="demo-warning">Contains animal abuse involving a kitten.</p>
@@ -285,16 +315,16 @@
       <div class="demo-comparison"><section class="demo-model" data-model-id="GRPO-STR" aria-labelledby="str-vs-atpo-kitten-model-0">
       <p class="demo-kicker">Static reward</p><h5 id="str-vs-atpo-kitten-model-0">GRPO</h5>
       <p class="demo-label-heading">Predicted labels</p>
-      <ul class="demo-labels" aria-label="GRPO predicted labels"><li>Safe · No unsafe labels</li></ul>
-      <p class="demo-outcome demo-missed">Missed label: Abuse</p>
+      <ul class="demo-labels" aria-label="GRPO predicted labels, compared with ground truth"><li>Safe · No unsafe labels</li><li class="label-missed">Abuse <span class="label-tag">missed</span></li></ul>
+      <p class="demo-outcome demo-error">Missed label: Abuse</p>
       <details class="demo-reasoning"><summary>View response excerpts</summary><blockquote>
         <p>C1: Sexual Content - The video shows a cat playing with a toy, which is not related to sexual content.</p><p>C2: Harassment &amp; Bullying - The video does not show any harassment or bullying.</p>
       </blockquote></details>
     </section><section class="demo-model demo-model-atpo" data-model-id="ATPO-G-Paper" aria-labelledby="str-vs-atpo-kitten-model-1">
       <p class="demo-kicker">Adaptive reward</p><h5 id="str-vs-atpo-kitten-model-1">ATPO</h5>
       <p class="demo-label-heading">Predicted labels</p>
-      <ul class="demo-labels" aria-label="ATPO predicted labels"><li>Abuse</li></ul>
-      <p class="demo-outcome demo-matched">Matches all ground-truth labels</p>
+      <ul class="demo-labels" aria-label="ATPO predicted labels, compared with ground truth"><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Abuse<span class="visually-hidden"> (correct)</span></li></ul>
+      <p class="demo-outcome demo-matched"><span aria-hidden="true">✓ </span>Matches all ground-truth labels</p>
       <details class="demo-reasoning"><summary>View response excerpts</summary><blockquote>
         <p>C2: Harassment &amp; Bullying - The video shows a cat being hit and kicked by a person, which is a form of animal abuse and harassment.</p>
       </blockquote></details>
@@ -305,11 +335,12 @@
       <div class="demo-group-intro"><h3 id="demo-group-recall">Recall trade-off</h3><p>Higher recall can recover missed harms, while also producing extra flags. These two examples show both outcomes.</p></div>
       <div class="demo-choices" role="group" aria-label="Choose an example" data-demo-choices hidden><button type="button" data-demo-choice="balanced-vs-high-recall-benefit" aria-controls="balanced-vs-high-recall-benefit" aria-pressed="true">A recovered label</button><button type="button" data-demo-choice="balanced-vs-high-recall-cost" aria-controls="balanced-vs-high-recall-cost" aria-pressed="false">An extra label</button></div>
       <article class="demo-card" id="balanced-vs-high-recall-benefit" data-video-demo aria-labelledby="balanced-vs-high-recall-benefit-heading">
-      <header class="demo-header"><div><p class="demo-kicker">Benefit of higher recall</p><h4 id="balanced-vs-high-recall-benefit-heading">When higher recall catches more</h4></div><span class="demo-case-count">Example 3 of 5</span></header>
+      <header class="demo-header"><div><p class="demo-kicker">Benefit of higher recall</p><h4 id="balanced-vs-high-recall-benefit-heading">When higher recall catches more</h4></div><div class="demo-stepper"><button type="button" class="demo-step" data-demo-step="-1" aria-label="Previous example" hidden><span aria-hidden="true">‹</span></button><span class="demo-case-count">Example 3 of 5</span><button type="button" class="demo-step" data-demo-step="1" aria-label="Next example" hidden><span aria-hidden="true">›</span></button></div></header>
       <div class="demo-main">
         <div class="demo-media">
           <div class="demo-stage demo-stage-portrait">
             <div class="demo-cover" data-demo-cover>
+              <img class="demo-cover-image" src="./assets/posters/recall-benefit.jpg" alt="" loading="lazy" decoding="async">
               <svg class="demo-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.7 5.2A11 11 0 0 1 12 5c6 0 10 7 10 7a19 19 0 0 1-3.3 3.9M6.2 6.2A19 19 0 0 0 2 12s4 7 10 7a10 10 0 0 0 5.7-1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <p class="demo-cover-title">Video hidden</p>
               <p id="balanced-vs-high-recall-benefit-warning" class="demo-warning">Contains physical aggression and threatening gestures.</p>
@@ -330,26 +361,27 @@
       <div class="demo-comparison"><section class="demo-model" data-model-id="ATPO-G" aria-labelledby="balanced-vs-high-recall-benefit-model-0">
       <p class="demo-kicker">Global control</p><h5 id="balanced-vs-high-recall-benefit-model-0">ATPO · Balanced</h5>
       <p class="demo-label-heading">Predicted labels</p>
-      <ul class="demo-labels" aria-label="ATPO · Balanced predicted labels"><li>Extreme</li></ul>
-      <p class="demo-outcome demo-missed">Missed label: Abuse</p>
+      <ul class="demo-labels" aria-label="ATPO · Balanced predicted labels, compared with ground truth"><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Extreme<span class="visually-hidden"> (correct)</span></li><li class="label-missed">Abuse <span class="label-tag">missed</span></li></ul>
+      <p class="demo-outcome demo-error">Missed label: Abuse</p>
       <details class="demo-reasoning"><summary>View response excerpts</summary><blockquote>
         <p>This video contains content that appears to be promoting hate speech and inciting violence, which falls under C6 (Hateful Content &amp; Extremism).</p>
       </blockquote></details>
     </section><section class="demo-model demo-model-atpo" data-model-id="ATPO-G-HighRecall" aria-labelledby="balanced-vs-high-recall-benefit-model-1">
       <p class="demo-kicker">Global control</p><h5 id="balanced-vs-high-recall-benefit-model-1">ATPO · Higher recall</h5>
       <p class="demo-label-heading">Predicted labels</p>
-      <ul class="demo-labels" aria-label="ATPO · Higher recall predicted labels"><li>Abuse</li><li>Extreme</li></ul>
-      <p class="demo-outcome demo-matched">Matches all ground-truth labels</p>
+      <ul class="demo-labels" aria-label="ATPO · Higher recall predicted labels, compared with ground truth"><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Abuse<span class="visually-hidden"> (correct)</span></li><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Extreme<span class="visually-hidden"> (correct)</span></li></ul>
+      <p class="demo-outcome demo-matched"><span aria-hidden="true">✓ </span>Matches all ground-truth labels</p>
       <details class="demo-reasoning"><summary>View response excerpts</summary><blockquote>
         <p>The first part of the video shows a person being physically aggressive towards another person, which is a form of harassment.</p>
       </blockquote></details>
     </section></div>
     </article><article class="demo-card" id="balanced-vs-high-recall-cost" data-video-demo aria-labelledby="balanced-vs-high-recall-cost-heading">
-      <header class="demo-header"><div><p class="demo-kicker">Cost of higher recall</p><h4 id="balanced-vs-high-recall-cost-heading">When higher recall adds a false alarm</h4></div><span class="demo-case-count">Example 4 of 5</span></header>
+      <header class="demo-header"><div><p class="demo-kicker">Cost of higher recall</p><h4 id="balanced-vs-high-recall-cost-heading">When higher recall adds a false alarm</h4></div><div class="demo-stepper"><button type="button" class="demo-step" data-demo-step="-1" aria-label="Previous example" hidden><span aria-hidden="true">‹</span></button><span class="demo-case-count">Example 4 of 5</span><button type="button" class="demo-step" data-demo-step="1" aria-label="Next example" hidden><span aria-hidden="true">›</span></button></div></header>
       <div class="demo-main">
         <div class="demo-media">
           <div class="demo-stage demo-stage-portrait">
             <div class="demo-cover" data-demo-cover>
+              <img class="demo-cover-image" src="./assets/posters/recall-cost.jpg" alt="" loading="lazy" decoding="async">
               <svg class="demo-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.7 5.2A11 11 0 0 1 12 5c6 0 10 7 10 7a19 19 0 0 1-3.3 3.9M6.2 6.2A19 19 0 0 0 2 12s4 7 10 7a10 10 0 0 0 5.7-1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <p class="demo-cover-title">Video hidden</p>
               <p id="balanced-vs-high-recall-cost-warning" class="demo-warning">Contains a physical fight.</p>
@@ -370,31 +402,32 @@
       <div class="demo-comparison"><section class="demo-model" data-model-id="ATPO-G" aria-labelledby="balanced-vs-high-recall-cost-model-0">
       <p class="demo-kicker">Global control</p><h5 id="balanced-vs-high-recall-cost-model-0">ATPO · Balanced</h5>
       <p class="demo-label-heading">Predicted labels</p>
-      <ul class="demo-labels" aria-label="ATPO · Balanced predicted labels"><li>Violence</li></ul>
-      <p class="demo-outcome demo-matched">Matches all ground-truth labels</p>
+      <ul class="demo-labels" aria-label="ATPO · Balanced predicted labels, compared with ground truth"><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Violence<span class="visually-hidden"> (correct)</span></li></ul>
+      <p class="demo-outcome demo-matched"><span aria-hidden="true">✓ </span>Matches all ground-truth labels</p>
       <details class="demo-reasoning"><summary>View response excerpts</summary><blockquote>
         <p>The text &quot;Love this town 😎😎&quot; suggests a positive attitude towards the violent act, which could be considered harmful content.</p><p>Therefore, the most relevant category for this video is C3: Threats, Violence &amp; Harm.</p>
       </blockquote></details>
     </section><section class="demo-model demo-model-atpo" data-model-id="ATPO-G-HighRecall" aria-labelledby="balanced-vs-high-recall-cost-model-1">
       <p class="demo-kicker">Global control</p><h5 id="balanced-vs-high-recall-cost-model-1">ATPO · Higher recall</h5>
       <p class="demo-label-heading">Predicted labels</p>
-      <ul class="demo-labels" aria-label="ATPO · Higher recall predicted labels"><li>Violence</li><li>Extreme</li></ul>
-      <p class="demo-outcome demo-missed">Extra label: Extreme</p>
+      <ul class="demo-labels" aria-label="ATPO · Higher recall predicted labels, compared with ground truth"><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Violence<span class="visually-hidden"> (correct)</span></li><li class="label-extra"><span class="label-icon" aria-hidden="true">+</span>Extreme <span class="label-tag">extra</span></li></ul>
+      <p class="demo-outcome demo-error">Extra label: Extreme</p>
       <details class="demo-reasoning"><summary>View response excerpts</summary><blockquote>
         <p>This video depicts a physical altercation between two individuals on the ground.</p><p>The text overlay &quot;Love this town 😎😎&quot; suggests a celebratory or approving tone towards the violence.</p>
       </blockquote></details>
     </section></div>
     </article>
-      <details class="demo-settings"><summary>Training details</summary><p>Both models use the global adaptive reward. Balanced uses a global training target of 1; Higher recall uses 0.2. These are separate trained models.</p></details>
+      <details class="demo-settings"><summary>Training details</summary><p>Both models use the global adaptive reward. Balanced uses a global training target of 1; Higher recall uses 0.2.</p></details>
     </section><section class="demo-group" id="demo-panel-category" data-demo-panel aria-labelledby="demo-group-category">
       <div class="demo-group-intro"><h3 id="demo-group-category">Category focus</h3><p>A model can be trained to prioritize recall for a particular category. Here, the focus is Extreme.</p></div>
 
       <article class="demo-card" id="catr-balanced-vs-adjusted-c6" data-video-demo aria-labelledby="catr-balanced-vs-adjusted-c6-heading">
-      <header class="demo-header"><div><p class="demo-kicker">Recall for Extreme</p><h4 id="catr-balanced-vs-adjusted-c6-heading">Detecting an additional category</h4></div><span class="demo-case-count">Example 5 of 5</span></header>
+      <header class="demo-header"><div><p class="demo-kicker">Recall for Extreme</p><h4 id="catr-balanced-vs-adjusted-c6-heading">Detecting an additional category</h4></div><div class="demo-stepper"><button type="button" class="demo-step" data-demo-step="-1" aria-label="Previous example" hidden><span aria-hidden="true">‹</span></button><span class="demo-case-count">Example 5 of 5</span><button type="button" class="demo-step" data-demo-step="1" aria-label="Next example" hidden><span aria-hidden="true">›</span></button></div></header>
       <div class="demo-main">
         <div class="demo-media">
           <div class="demo-stage demo-stage-portrait">
             <div class="demo-cover" data-demo-cover>
+              <img class="demo-cover-image" src="./assets/posters/category-control.jpg" alt="" loading="lazy" decoding="async">
               <svg class="demo-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.7 5.2A11 11 0 0 1 12 5c6 0 10 7 10 7a19 19 0 0 1-3.3 3.9M6.2 6.2A19 19 0 0 0 2 12s4 7 10 7a10 10 0 0 0 5.7-1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <p class="demo-cover-title">Video hidden</p>
               <p id="catr-balanced-vs-adjusted-c6-warning" class="demo-warning">Contains a physical fight.</p>
@@ -415,16 +448,16 @@
       <div class="demo-comparison"><section class="demo-model" data-model-id="ATPO-C-Balanced" aria-labelledby="catr-balanced-vs-adjusted-c6-model-0">
       <p class="demo-kicker">Category control</p><h5 id="catr-balanced-vs-adjusted-c6-model-0">ATPO · Balanced</h5>
       <p class="demo-label-heading">Predicted labels</p>
-      <ul class="demo-labels" aria-label="ATPO · Balanced predicted labels"><li>Violence</li></ul>
-      <p class="demo-outcome demo-missed">Missed label: Extreme</p>
+      <ul class="demo-labels" aria-label="ATPO · Balanced predicted labels, compared with ground truth"><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Violence<span class="visually-hidden"> (correct)</span></li><li class="label-missed">Extreme <span class="label-tag">missed</span></li></ul>
+      <p class="demo-outcome demo-error">Missed label: Extreme</p>
       <details class="demo-reasoning"><summary>View response excerpts</summary><blockquote>
         <p>However, the presence of a fight scene suggests that there is a high likelihood of violence and harm being depicted. Therefore, the most relevant category is C3: Threats, Violence &amp; Harm.</p>
       </blockquote></details>
     </section><section class="demo-model demo-model-atpo" data-model-id="ATPO-C-Adjusted" aria-labelledby="catr-balanced-vs-adjusted-c6-model-1">
       <p class="demo-kicker">More sensitive to Extreme</p><h5 id="catr-balanced-vs-adjusted-c6-model-1">ATPO · Category focus</h5>
       <p class="demo-label-heading">Predicted labels</p>
-      <ul class="demo-labels" aria-label="ATPO · Category focus predicted labels"><li>Violence</li><li>Extreme</li></ul>
-      <p class="demo-outcome demo-matched">Matches all ground-truth labels</p>
+      <ul class="demo-labels" aria-label="ATPO · Category focus predicted labels, compared with ground truth"><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Violence<span class="visually-hidden"> (correct)</span></li><li class="label-correct"><span class="label-icon" aria-hidden="true">✓</span>Extreme<span class="visually-hidden"> (correct)</span></li></ul>
+      <p class="demo-outcome demo-matched"><span aria-hidden="true">✓ </span>Matches all ground-truth labels</p>
       <details class="demo-reasoning"><summary>View response excerpts</summary><blockquote>
         <p>C6: Hateful Content &amp; Extremism - The video depicts a fight scene, which can be considered as a form of glorifying violence and aggression, which is a hateful content.</p>
       </blockquote></details>
