@@ -338,11 +338,13 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
 .demo-reveal { min-height: 44px; margin-top: 22px; padding: 10px 20px; border: 1px solid var(--accent); border-radius: 8px; background: var(--accent); color: #fff; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
 .demo-reveal:hover { background: #892638; }
 .demo-reveal:disabled { opacity: .6; cursor: default; }
-.demo-hide { min-height: 36px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; color: var(--accent); background: #fff; font: inherit; font-size: 12px; cursor: pointer; }
-.demo-hide:hover { border-color: var(--accent); }
-.demo-reveal:focus-visible, .demo-hide:focus-visible, .demo-stage video:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.demo-hide, .demo-retry { min-height: 36px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; color: var(--accent); background: #fff; font: inherit; font-size: 12px; cursor: pointer; }
+.demo-hide:hover, .demo-retry:hover { border-color: var(--accent); }
+.demo-reveal:focus-visible, .demo-hide:focus-visible, .demo-retry:focus-visible, .demo-stage video:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .demo-playback { display: flex; align-items: center; justify-content: space-between; min-height: 44px; gap: 12px; margin-top: 6px; color: var(--muted); font-size: 12px; }
-.demo-error { color: var(--accent); font-size: 13px; line-height: 1.7; }
+.demo-load-state { margin: 4px 0 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.demo-status { margin: 0; }
+.demo-retry { margin-top: 8px; }
 .demo-label-heading { margin: 0 0 10px; color: var(--muted); font-size: 12px; font-weight: 600; }
 .demo-labels { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
 .demo-labels li { padding: 5px 12px; border: 1px solid var(--line); border-radius: 6px; background: #fff; font-size: 13px; font-weight: 600; line-height: 1.5; }
@@ -458,7 +460,7 @@ body.figure-open { overflow: hidden; }
 @media print {
   .demo-tabs, .demo-choices { display: none; }
   #demos .demo-group[hidden], #demos .demo-card[hidden] { display: block; }
-  .demo-stage, .demo-playback, .demo-error { display: none; }
+  .demo-stage, .demo-playback, .demo-load-state { display: none; }
   .demo-main { display: block; }
   .section-nav, .enlarge-label, .skip-link, .figure-viewer, .copy-bibtex, footer a { display: none; }
   .research-section { margin-top: 30px; padding-top: 25px; }

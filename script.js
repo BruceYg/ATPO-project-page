@@ -70,22 +70,70 @@
     const cover = demo.querySelector('[data-demo-cover]');
     const reveal = demo.querySelector('[data-reveal-video]');
     const hide = demo.querySelector('[data-hide-video]');
-    const error = demo.querySelector('[data-video-error]');
-    if (!video || !cover || !reveal || !hide || !error) return;
+    const loadState = demo.querySelector('[data-video-load-state]');
+    const status = demo.querySelector('[data-video-status]');
+    const retry = demo.querySelector('[data-retry-video]');
+    if (!video || !cover || !reveal || !hide || !loadState || !status || !retry) return;
+
+    let revealed = false;
+    let loading = false;
+    let slowTimer;
+    const isActive = () => revealed && video.hasAttribute('src');
+    const clearLoading = () => {
+      clearTimeout(slowTimer);
+      slowTimer = undefined;
+      loading = false;
+    };
+    const showStatus = (message, canRetry = false) => {
+      status.textContent = message;
+      retry.hidden = !canRetry;
+      loadState.hidden = !message;
+    };
+    const showLoading = () => {
+      if (!isActive() || video.error || loading) return;
+      loading = true;
+      showStatus('Loading video…');
+      // A slow request is not a failed video. Let the viewer choose when to retry.
+      slowTimer = setTimeout(() => {
+        if (isActive() && loading && !video.error) {
+          showStatus('This is taking longer than expected. Try Play or retry loading.', true);
+        }
+      }, 12000);
+    };
+    const showReady = () => {
+      if (!isActive() || video.error || video.readyState < 2) return;
+      clearLoading();
+      showStatus(video.paused ? 'Ready — press play.' : '');
+    };
 
     const reset = () => {
+      revealed = false;
+      clearLoading();
+      cover.hidden = false;
       video.pause();
       video.hidden = true;
+      video.preload = 'none';
       if (video.hasAttribute('src')) {
         video.removeAttribute('src');
         video.load();
       }
-      cover.hidden = false;
       hide.hidden = true;
-      error.hidden = true;
+      showStatus('');
       reveal.setAttribute('aria-expanded', 'false');
     };
     resetVideos.set(demo, reset);
+
+    const loadVideo = () => {
+      clearLoading();
+      video.pause();
+      video.muted = true;
+      // Fetch immediately after consent, while leaving playback to the viewer.
+      video.preload = 'auto';
+      if (!video.hasAttribute('src')) video.src = video.dataset.videoSrc;
+      video.load();
+      showLoading();
+      video.focus();
+    };
 
     reveal.disabled = false;
     reveal.addEventListener('click', () => {
@@ -93,25 +141,40 @@
       resetVideos.forEach((resetOther, other) => {
         if (other !== demo) resetOther();
       });
-      error.hidden = true;
+      revealed = true;
       cover.hidden = true;
       video.hidden = false;
       hide.hidden = false;
       reveal.setAttribute('aria-expanded', 'true');
-      video.muted = true;
-      // Assign the source only after consent; revealing never starts playback.
-      video.src = video.dataset.videoSrc;
-      video.load();
-      video.focus();
+      loadVideo();
     });
 
+    retry.addEventListener('click', () => {
+      if (isActive()) loadVideo();
+    });
     hide.addEventListener('click', () => {
       reset();
       reveal.focus();
     });
 
+    ['loadeddata', 'canplay', 'pause', 'ended'].forEach(event => {
+      video.addEventListener(event, showReady);
+    });
+    ['waiting', 'stalled'].forEach(event => {
+      video.addEventListener(event, () => {
+        if (video.readyState < 2 || (!video.paused && video.readyState < 3)) showLoading();
+      });
+    });
+    video.addEventListener('playing', () => {
+      if (!isActive() || video.error || video.paused) return;
+      clearLoading();
+      showStatus('');
+    });
     video.addEventListener('error', () => {
-      if (video.hasAttribute('src')) error.hidden = false;
+      // Ignore events queued by a source that has since been hidden or reset.
+      if (!isActive() || !video.error) return;
+      clearLoading();
+      showStatus('The video could not be loaded. Please retry.', true);
     });
   });
 
