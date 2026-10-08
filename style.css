@@ -189,12 +189,21 @@ h2 {
   text-align: center;
 }
 
-.tldr { margin: 0; }
-.tldr div { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 4px 20px; padding: 16px 0; border-bottom: 1px solid var(--line); }
-.tldr div:first-child { padding-top: 4px; }
-.tldr dt { padding-top: 4px; color: var(--accent); font-size: var(--fs-xs); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.tldr dd { margin: 0; font-size: var(--fs-md); line-height: 1.75; }
-.abstract-full summary { padding-inline: 0; }
+.tldr {
+  display: grid;
+  gap: 24px;
+  margin: 0;
+  padding: 28px 32px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  background: #fff;
+}
+.tldr dt { margin-bottom: 6px; color: var(--accent); font-size: var(--fs-md); font-weight: 650; line-height: 1.5; }
+.tldr dd { margin: 0; font-size: var(--fs-md); line-height: 1.7; }
+.abstract-full { margin-top: 12px; }
+.abstract-full summary { width: fit-content; margin-inline: auto; padding: 10px 6px; }
+.abstract-full[open] summary { margin-bottom: 10px; }
 .abstract-full p { margin: 0 0 8px; color: var(--muted); font-size: var(--fs-md); line-height: 1.8; }
 
 footer {
@@ -233,8 +242,7 @@ footer span:first-child { color: var(--accent); font-weight: 700; letter-spacing
   .hero-stats a { padding: 13px 4px; }
   .abstract { margin-top: 37px; padding-top: 28px; }
   h2 { margin-bottom: 16px; }
-  .tldr div { grid-template-columns: 1fr; padding: 14px 0; }
-  .tldr dt { padding-top: 0; }
+  .tldr { gap: 20px; padding: 22px 20px; }
   footer { margin-inline: 18px; padding-top: 18px; }
 }
 
